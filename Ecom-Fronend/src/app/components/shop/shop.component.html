@@ -1,0 +1,8 @@
+<div class="main-container">
+  <ng-container *ngIf="cardDetails$ | async as cards">
+    <div class="card" *ngFor="let card of cards">
+      <shop-card [cardDetail]="card"></shop-card>
+    </div>
+  </ng-container>
+
+</div>

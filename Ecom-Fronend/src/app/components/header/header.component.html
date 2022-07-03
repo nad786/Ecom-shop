@@ -1,0 +1,8 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item" *ngFor="let header of headers; let i = index">
+      <a class="nav-link" (click)="selectedHeader = header" [ngClass]="{'active': selectedHeader == header}" href="#"
+        [routerLink]="['/'+header]">{{header}}</a>
+    </li>
+  </ul>
+</nav>
