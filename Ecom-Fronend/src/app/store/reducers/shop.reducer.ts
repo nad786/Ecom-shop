@@ -15,8 +15,8 @@ export const shopReducer = createReducer(
     ...state,
     card: [...state.carts, props],
   })),
-  on(updateProducts, (state, props: any) => ({
+  on(updateProducts, (state, props) => ({
     ...state,
-    products: props,
+    products: props.products,
   }))
 );

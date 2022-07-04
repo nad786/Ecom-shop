@@ -1,7 +1,7 @@
+import { CartsComponent } from './components/carts/carts.component';
 import { AdminProductsComponent } from './components/admin-products/admin-products.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { OrdersComponent } from './components/orders/orders.component';
-import { CardsComponent } from './components/cards/cards.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { NgModule } from '@angular/core';
@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'Cart',
-    component: CardsComponent,
+    component: CartsComponent,
   },
   {
     path: 'Orders',

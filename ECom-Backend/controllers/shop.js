@@ -8,7 +8,7 @@ exports.getCart = (req, res, next) => {
     const cartProducts = [];
     for (product of products) {
         const cartProductData = cart.products.find(
-            prod => prod.id === product.id
+            prod => prod.id === product.productId
         );
         if (cartProductData) {
             cartProducts.push({ productData: product, qty: cartProductData.qty });

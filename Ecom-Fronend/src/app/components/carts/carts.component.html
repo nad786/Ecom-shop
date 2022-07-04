@@ -1,0 +1,12 @@
+<div class="main-container">
+  <div class="carts">
+    <ng-container *ngIf="cartDetails$ | async as carts">
+      <div class="cart" *ngFor="let cart of carts; let i = index">
+        <div>{{i+1}}</div>
+        <div>{{cart.name}}</div>
+        <div>{{cart.quantity}}</div>
+      </div>
+    </ng-container>
+
+  </div>
+</div>

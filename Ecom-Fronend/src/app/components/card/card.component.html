@@ -4,6 +4,9 @@
     <div class="image"><img [src]="cardDetail.imgLink"></div>
     <div class="price">{{cardDetail.price}}</div>
     <div class="desc">{{cardDetail.desc}}</div>
-    <button class="btn btn-link">Details</button>
+    <div class="btn-group">
+      <button class="btn btn-info" (click)="addToCart()">Add To Cart</button>
+      <button class="btn btn-info">Details</button>
+    </div>
   </div>
 </div>

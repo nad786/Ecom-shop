@@ -9,15 +9,14 @@ module.exports = class Cart {
         const existingProduct = cartData.products.find(prod => prod.id === id);
 
         if (existingProduct) {
-            cartData.totalPrice += productPrice;
-
             let updatedProduct = { ...existingProduct };
+            cartData.totalPrice += productPrice;
             updatedProduct.qty += 1;
             cart.products = [...cart.products];
             cart.products[existingProductIndex] = updatedProduct;
         } else {
-            updatedProduct = { id: id, qty: 1 };
-            cart.products = [...cart.products, updatedProduct];
+            let updatedProduct = { id: id, qty: 1 };
+            cartData.products = [...cartData.products, updatedProduct];
         }
     }
 

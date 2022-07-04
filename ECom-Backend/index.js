@@ -7,7 +7,7 @@ const shopRoutes = require('./shop-api/shop');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(shopRoutes);
 
 app.listen(3300);

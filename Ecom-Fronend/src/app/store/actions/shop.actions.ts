@@ -10,6 +10,10 @@ export const addCarts = createAction('[Shop] Add Carts'
 
 export const getProducts = createAction('[Shop] GET Products')
 
+export const getCarts = createAction("[Shop] Get Carts")
+
+export const updateCarts = createAction("[Shop] Update Carts", props<{carts: Array<ICart>}>())
+
 export const updateProducts = createAction(
   '[Shop] Update Products',
   props<{products: Array<ICardState>}>()

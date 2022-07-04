@@ -12,12 +12,12 @@ import { environment } from '../environments/environment';
 import { HeaderComponent } from './components/header/header.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ProductsComponent } from './components/products/products.component';
-import { CardsComponent } from './components/cards/cards.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { AdminProductsComponent } from './components/admin-products/admin-products.component';
 import { CardComponent } from './components/card/card.component';
 import { EffectsModule } from '@ngrx/effects';
+import { CartsComponent } from './components/carts/carts.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +25,11 @@ import { EffectsModule } from '@ngrx/effects';
     HeaderComponent,
     ShopComponent,
     ProductsComponent,
-    CardsComponent,
     OrdersComponent,
     AddProductComponent,
     AdminProductsComponent,
     CardComponent,
+    CartsComponent,
   ],
   imports: [
     BrowserModule,

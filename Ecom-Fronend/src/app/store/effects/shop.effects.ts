@@ -1,4 +1,10 @@
-import { getProducts, updateProducts } from './../actions/shop.actions';
+import { HttpService } from './../../services/http.service';
+import {
+  getProducts,
+  updateProducts,
+  getCarts,
+  updateCarts,
+} from './../actions/shop.actions';
 import { IInitialApp } from 'src/app/models/IInitilaApp';
 import { Store } from '@ngrx/store';
 import { Injectable } from '@angular/core';
@@ -11,7 +17,7 @@ import { map, switchMap } from 'rxjs';
 export class ShopEffects {
   constructor(
     private actions$: Actions,
-    private http: HttpClient,
+    private http: HttpService,
     private router: Router,
     private store: Store<IInitialApp>
   ) {}
@@ -23,6 +29,19 @@ export class ShopEffects {
         return this.http.get('api/products').pipe(
           map((products: any) => {
             return updateProducts({ products: products.products });
+          })
+        );
+      })
+    )
+  );
+
+  fetchCarts$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(getCarts),
+      switchMap(() => {
+        return this.http.get('api/cart').pipe(
+          map((carts: any) => {
+            return updateCarts({ carts: carts });
           })
         );
       })
